@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exquimed Hospital</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: "Poppins", sans-serif; scroll-behavior: smooth; }
+
+    /* Navbar */
+    .navbar { background-color: rgb(92, 92, 189); }
+    .navbar-brand { color: #fff !important; font-weight: bold; font-size:1.5rem; }
+    .nav-link { color: #eee !important; font-weight: 500; }
+    .nav-link:hover { color: #fff !important; text-decoration: underline; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("https://images.unsplash.com/photo-1588776814546-ec7d1e2ed5b6?auto=format&fit=crop&w=1470&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 180px 20px 120px 20px;
+    }
+    .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; }
+    .hero img { height: 100px; margin-bottom: 20px; }
+    .hero p { font-size: 1.3rem; margin-bottom: 30px; }
+    @media (max-width: 576px) { 
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .hero img { height: 80px; }
+    }
+
+    /* Buttons */
+    .btn-primary { background-color: rgb(92, 92, 189); border: none; }
+    .btn-primary:hover { background-color: rgb(72,72,159); }
+
+    /* Sections */
+    .section-title { color: rgb(92, 92, 189); text-align: center; margin-top: 60px; margin-bottom: 20px; font-weight: bold; }
+    .section-divider { width: 80px; height: 4px; background-color: rgb(92, 92, 189); border-radius: 10px; margin: 0 auto 40px; }
+
+    /* Cards */
+    .card { border: none; transition: 0.3s ease-in-out; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+
+    /* Testimonials */
+    #testimonials { background-color: rgb(245,245,245); padding-top:60px; padding-bottom:60px; }
+    #testimonials blockquote { max-width: 700px; margin: 0 auto; }
+    #testimonials blockquote p { color: #555; font-style: italic; font-size:1.1rem; }
+    #testimonials .blockquote-footer { color: rgb(92,92,189); font-weight: bold; margin-top: 10px; }
+    .carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(0.5); }
+
+    /* Forms */
+    .form-control, .form-select { margin-bottom: 1rem; }
+    .form-section { background-color: #f8f9fa; padding: 60px 20px; border-radius: 10px; }
+
+    /* Footer */
+    footer { background-color: black ; color: #fff; text-align: center; padding: 2rem 0; margin-top: 60px; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand" href="#">Exquimed Hospital</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#index">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#appointment">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <img src="images/Exquimed.jpg" alt="Exquimed Logo">
+  <h1>Welcome to Exquimed Hospital</h1>
+  <p class="lead">Your Health Is Our Top Priority</p>
+  <a href="#services" class="btn btn-primary px-4 py-2">Explore Services</a>
+</section>
+
+<!-- About -->
+<section id="about" class="container py-5">
+  <h2 class="section-title">About Us</h2>
+  <div class="section-divider"></div>
+  <p class="text-secondary text-center">
+    At Exquimed Hospital, we provide quality healthcare services with professionalism and compassion. 
+    Our expert medical team ensures that every patient receives personalized care in a safe, clean, and comfortable environment.
+  </p>
+</section>
+
+<!-- Services -->
+<section id="services" class="container py-5">
+  <h2 class="section-title">Our Services</h2>
+  <div class="section-divider"></div>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="https://images.unsplash.com/photo-1580281657521-53fc9486a5f0?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Laboratory">
+        <div class="card-body">
+          <h5 class="card-title">Laboratory Test</h5>
+          <p class="card-text text-secondary">Advanced lab services for accurate and quick diagnosis of health conditions.</p>
+          <a href="services.html" class="btn btn-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37d25?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Screening">
+        <div class="card-body">
+          <h5 class="card-title">Medical Screening</h5>
+          <p class="card-text text-secondary">Comprehensive screening programs for early detection and prevention of diseases.</p>
+          <a href="services.html" class="btn btn-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <img src="https://images.unsplash.com/photo-1631805391107-dc09e29a51b3?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Consultation">
+        <div class="card-body">
+          <h5 class="card-title">General Consultation</h5>
+          <p class="card-text text-secondary">Speak to certified doctors for professional advice and medical support.</p>
+          <a href="services.html" class="btn btn-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <div class="container text-center">
+    <h2 class="section-title">What Our Patients Say</h2>
+    <div class="section-divider"></div>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause="hover">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote class="blockquote mx-auto" style="max-width:700px;">
+            <p class="mb-4 fs-5 fst-italic text-secondary">
+              "Exquimed Hospital saved my life! The doctors were very attentive and the facilities are world-class. I felt truly cared for."
+            </p>
+            <footer class="blockquote-footer mt-2">— Sarah Johnson</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote mx-auto" style="max-width:700px;">
+            <p class="mb-4 fs-5 fst-italic text-secondary">
+              "From booking an appointment to post-surgery checkups, everything was smooth and professional. Highly recommend Exquimed!"
+            </p>
+            <footer class="blockquote-footer mt-2">— Dr. Ahmed Bello</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote mx-auto" style="max-width:700px;">
+            <p class="mb-4 fs-5 fst-italic text-secondary">
+              "The nurses were kind, patient, and always smiling. I’ve never felt this comfortable in a hospital before."
+            </p>
+            <footer class="blockquote-footer mt-2">— Chidinma Okafor</footer>
+          </blockquote>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="container py-5 form-section">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="section-divider"></div>
+  <form action="https://formsubmit.co/muhammedtahirukamil27@gmail.com" method="POST" class="mx-auto" style="max-width:600px;">
+    <input type="text" class="form-control" name="first-name" placeholder="First Name" required>
+    <input type="text" class="form-control" name="last-name" placeholder="Last Name" required>
+    <input type="tel" class="form-control" name="phoneNumber" placeholder="Phone Number" required>
+    <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+    <textarea class="form-control" name="message" rows="4" placeholder="Write your message..." required></textarea>
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+  </form>
+</section>
+
+<!-- Appointment Booking -->
+<section id="appointment" class="container py-5 form-section">
+  <h2 class="section-title text-center">Book an Appointment</h2>
+  <div class="section-divider"></div>
+  <form action="https://formsubmit.co/muhammedtahirukamil27@gmail.com" method="post" class="mx-auto" style="max-width:600px;">
+    <div class="row g-3">
+      <div class="col-md-6"><input type="text" class="form-control" name="first-name" placeholder="First Name" required></div>
+      <div class="col-md-6"><input type="text" class="form-control" name="last-name" placeholder="Last Name" required></div>
+      <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Email Address" required></div>
+      <div class="col-md-6"><input type="number" class="form-control" name="phoneNumber" placeholder="Phone Number" required></div>
+      <div class="col-md-6"><input type="date" class="form-control" name="appointment-date" required></div>
+      <div class="col-md-6">
+        <select class="form-select" name="department" required>
+          <option value="" disabled selected>Select Department</option>
+          <option value="general-consultation">General Consultation</option>
+          <option value="laboratory-test">Laboratory Test</option>
+          <option value="medical-screening">Medical Screening</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" name="message" rows="3" placeholder="Additional Details (optional)"></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary px-4 py-2">Book Appointment</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p class="mb-0">&copy; 2025 Exquimed Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
