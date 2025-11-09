@@ -80,8 +80,8 @@
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
               <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
-              <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-              <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3 text-white" href="appointment.html">Book Appointment</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link  active btn btn-primary ms-lg-3 text-white" href="appointment.html">Book Appointment</a></li>
           </ul>
       </div>
   </div>
@@ -105,28 +105,29 @@
   <div class="row justify-content-center">
     <div class="col-lg-8">
       <div class="card shadow-sm p-4">
-        <form action="https://formsubmit.co/muhammedtahirukamil27@gmail.com">
+        <form action="https://formsubmit.co/muhammedtahirukamil27@gmail.com" method="POST">
+            <input type="hidden"name="_next" value="HospitalAssignment/appointment.html">
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="fullName" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
+              <input type="text" class="form-control"name="fullName" id="fullName" placeholder="Your full name" required>
             </div>
             <div class="col-md-6 mb-3">
               <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Your email" required>
+              <input type="email" class="form-control" id="email"name="email" placeholder="Your email" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control" id="phone" placeholder="Your phone number" required>
+              <input type="tel" class="form-control" name="Phonenumber"id="phone" placeholder="Your phone number" required>
             </div>
 
             <!-- Department / Service -->
             <div class="col-md-6 mb-3">
               <label for="department" class="form-label">Department / Service</label>
-              <select class="form-select" id="department" required>
+              <select class="form-select" id="department"name="Department/services" required>
                 <option selected disabled>Select a department</option>
                 <option>General Medicine</option>
                 <option>Pediatrics</option>
@@ -142,20 +143,20 @@
             <!-- Date -->
             <div class="col-md-6 mb-3">
               <label for="date" class="form-label">Preferred Date</label>
-              <input type="date" class="form-control" id="date" required>
+              <input type="date" class="form-control" id="date"name="Date" required>
             </div>
 
             <!-- Time -->
             <div class="col-md-6 mb-3">
               <label for="time" class="form-label">Preferred Time</label>
-              <input type="time" class="form-control" id="time" required>
+              <input type="time" class="form-control" id="time" name="time">
             </div>
           </div>
 
           <!-- Message / Notes -->
           <div class="mb-3">
             <label for="notes" class="form-label">Additional Notes</label>
-            <textarea class="form-control" id="notes" rows="4" placeholder="Any additional information or requests..."></textarea>
+            <textarea class="form-control" id="notes" rows="4" placeholder="Any additional information or requests..."name="Message"></textarea>
           </div>
 
           <!-- Submit Button -->
